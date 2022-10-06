@@ -18,21 +18,21 @@
 
 .first-square {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 15%;
+    left: 15%;
 }
 .second-square {
     position: absolute;
-    top: 25%;
-    left: 60%;
+    top: 15%;
+    left: 55%;
 }
 .third-square {
     position: absolute;
     top: 60%;
-    left: 25%;
+    left: 15%;
 }
 .fourth-square {
     position: absolute;
     top: 60%;
-    left: 60%;
+    left: 55%;
 }

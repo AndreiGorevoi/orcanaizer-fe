@@ -1,5 +1,6 @@
-import axios from "axios"
 import { Fragment, useEffect, useState } from "react"
+import { getMethod } from "../api/CallingServerService"
+import DailyTaskTaskCards from "../components/DailyTaskCard"
 import styles from "./DailyTaskPage.module.css"
 
 const DailyTaskBySquaresPage = () => {
@@ -7,7 +8,7 @@ const DailyTaskBySquaresPage = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:8080/task").then(resp => {
+        getMethod('task').then(resp => {
             setTasks(resp.data)
         })
     }, [])
@@ -16,56 +17,39 @@ const DailyTaskBySquaresPage = () => {
     return (
         <Fragment>
             <h3>Daily tasks</h3>
-            <div>
-                {tasks.map(taskItem => {
-                    return <p key={taskItem.id}>{JSON.stringify(taskItem)}</p>
-                })}
-            </div>
             <div className={styles["vertical-line"]} />
             <div className={styles["horizontal-line"]} />
 
             <div className={styles["first-square"]}>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
+                {tasks.filter(oneTask => oneTask.priority === 1).map(taskItem => {
+                    return (
+                        <DailyTaskTaskCards taskItem={taskItem} />
+                    )
+                })}
             </div>
 
             <div className={styles["second-square"]}>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
+                {tasks.filter(oneTask => oneTask.priority === 2).map(taskItem => {
+                    return (
+                        <DailyTaskTaskCards taskItem={taskItem} />
+                    )
+                })}
             </div>
 
             <div className={styles["third-square"]}>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
+                {tasks.filter(oneTask => oneTask.priority === 3).map(taskItem => {
+                    return (
+                        <DailyTaskTaskCards taskItem={taskItem} />
+                    )
+                })}
             </div>
 
             <div className={styles["fourth-square"]}>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
-                <div>
-                    <h2>Task title</h2>
-                    <p>Dexc of task</p>
-                </div>
+                {tasks.filter(oneTask => oneTask.priority === 4).map(taskItem => {
+                    return (
+                        <DailyTaskTaskCards taskItem={taskItem} />
+                    )
+                })}
             </div>
         </Fragment>
 
