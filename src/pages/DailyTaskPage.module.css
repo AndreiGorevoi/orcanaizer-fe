@@ -1,0 +1,38 @@
+.horizontal-line{
+    top : 50%;
+    left: 10%;
+    width: 80%;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+.vertical-line {
+    top: 15%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    border-left: 1px solid black;
+    position: absolute;
+}
+
+.first-square {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+.second-square {
+    position: absolute;
+    top: 25%;
+    left: 60%;
+}
+.third-square {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+}
+.fourth-square {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+}
