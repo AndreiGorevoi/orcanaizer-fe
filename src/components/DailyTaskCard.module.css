@@ -1,14 +1,22 @@
 .taskCard {
-    color: #0000;
-    background: 
-      linear-gradient(90deg,#1095c1 50%,#000 0) 
-      var(--_p,100%)/200% no-repeat;
-    -webkit-background-clip: text;
-            background-clip: text;
-    transition: .4s;
+    font-size: x-small;
+}
+
+.taskCardRemoved {
+  font-size: x-small;
+  opacity: 0.2;
 }
 
 .taskCard:hover {
     --_p: 0%;
     cursor: pointer;
+}
+
+.taskCardCompleted:hover {
+  --_p: 0%;
+  cursor: pointer;
+}
+
+.inlineBlock{
+  display: inline-block
 }

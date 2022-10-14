@@ -36,3 +36,9 @@
     top: 60%;
     left: 55%;
 }
+
+.saveButtonBlock{
+    position: absolute;
+    top: 10%;
+    left: 90%;
+}

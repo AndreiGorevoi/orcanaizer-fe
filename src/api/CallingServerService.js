@@ -9,3 +9,7 @@ export function getMethod(url) {
 export function deleteMethod(url) {
     return axios.delete(`${SERVER_URL}/${url}`)
 }
+
+export function putMethod(url, data) {
+    return axios.put(`${SERVER_URL}/${url}`, data)
+}
